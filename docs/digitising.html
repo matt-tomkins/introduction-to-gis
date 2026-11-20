@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 3 Digitising | Introduction to GIS</title>
+<meta name="author" content="Matt Tomkins">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 3 Digitising | Introduction to GIS">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 3 Digitising | Introduction to GIS">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Source_Sans_Pro-0.4.10/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira%20Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="3.1 Introduction  Aims The aims of this practical are to: Aim A Aim B Aim C  Application To achieve this, we’ll …  Data WorldClim temperature and precipitation data, available in [data/world-clim]...">
+<meta property="og:description" content="3.1 Introduction  Aims The aims of this practical are to: Aim A Aim B Aim C  Application To achieve this, we’ll …  Data WorldClim temperature and precipitation data, available in [data/world-clim]...">
+<meta name="twitter:description" content="3.1 Introduction  Aims The aims of this practical are to: Aim A Aim B Aim C  Application To achieve this, we’ll …  Data WorldClim temperature and precipitation data, available in [data/world-clim]...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to GIS</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li class="book-part">Home</li>
+<li><a class="" href="index.html">Introduction to GIS</a></li>
+<li class="book-part">Practicals</li>
+<li><a class="" href="intro_to_qgis.html"><span class="header-section-number">1</span> Introduction to QGIS</a></li>
+<li><a class="" href="georeferencing.html"><span class="header-section-number">2</span> Georeferencing</a></li>
+<li><a class="active" href="digitising.html"><span class="header-section-number">3</span> Digitising</a></li>
+<li><a class="" href="querying.html"><span class="header-section-number">4</span> Spatial Queries</a></li>
+<li><a class="" href="visualisation.html"><span class="header-section-number">5</span> Visualisation</a></li>
+<li><a class="" href="data-sources.html"><span class="header-section-number">6</span> Data Sourcing</a></li>
+<li><a class="" href="participatory.html"><span class="header-section-number">7</span> Participatory GIS</a></li>
+<li><a class="" href="tranquil-1.html"><span class="header-section-number">8</span> Mapping Tranquility I</a></li>
+<li><a class="" href="tranquil-2.html"><span class="header-section-number">9</span> Mapping Tranquility II</a></li>
+<li class="book-part">Endmatter</li>
+<li><a class="" href="summary.html">Summary</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="digitising" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Digitising<a class="anchor" aria-label="anchor" href="#digitising"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introduction-2" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-2"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure"><img src="images/banners/digitising.png"></div>
+<div id="aims-2" class="section level3 unnumbered">
+<h3>Aims<a class="anchor" aria-label="anchor" href="#aims-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>The aims of this practical are to:</p>
+<ol style="list-style-type: decimal">
+<li>Aim A</li>
+<li>Aim B</li>
+<li>Aim C</li>
+</ol>
+</div>
+<div id="application-2" class="section level3 unnumbered">
+<h3>Application<a class="anchor" aria-label="anchor" href="#application-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>To achieve this, we’ll …</p>
+</div>
+<div id="data-3" class="section level3 unnumbered">
+<h3>Data<a class="anchor" aria-label="anchor" href="#data-3"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>WorldClim temperature and precipitation data, available in [<code>data/world-clim</code>] [<a href="https://www.worldclim.org/data/index.html">Source</a>]</li>
+</ul>
+</div>
+<div id="tools-1" class="section level3 unnumbered">
+<h3>Tools<a class="anchor" aria-label="anchor" href="#tools-1"><i class="fas fa-link"></i></a>
+</h3>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.html?tabs=dialog">Zonal Statistics as Table</a> (Spatial Analyst)</p>
+<hr>
+</div>
+</div>
+<div id="practical-2" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Practical<a class="anchor" aria-label="anchor" href="#practical-2"><i class="fas fa-link"></i></a>
+</h2>
+<div id="layer-creation" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> Layer Creation<a class="anchor" aria-label="anchor" href="#layer-creation"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>Open your QGIS project and load the georeferenced map from Practical 2.</p>
+</blockquote>
+<blockquote>
+<p>Layer → Create Layer → New Shapefile Layer. Choose a file name and location (<code>practical_2/bomb_locations.shp</code>), geometry type (<code>MultiPoint</code>) and choose the Project CRS (27700).</p>
+</blockquote>
+<blockquote>
+<p>Under New Field, we’ll create a new field with “Name” as <code>Category</code>. Keep “Type” as <code>Text (String)</code> and then click “Add to Fields List”</p>
+</blockquote>
+<blockquote>
+<p>Again under New Field, create a new field with “Name” as <code>Date</code> and set to “Type” to <code>Date</code> and “Add to Fields List”. To finish press “Ok”.</p>
+</blockquote>
+<p>This new layer should now be visible in the Layers Panel.</p>
+<blockquote>
+<p>Right click → Open Attribute Table we can see columns for storing the fields (attributes) we created earlier.</p>
+</blockquote>
+<p>At the moment, we have created our layer, which is stored as a shapefile (<code>.shp</code>) in our <code>practical_2</code> directory. However, there are currently no features present - we haven’t mapped anything yet!</p>
+<p>Before we do that, we’ll repeat the above process to create a <strong>polygon</strong> layer for storing buildings damaged or destroyed during the bombing.</p>
+<blockquote>
+<p>Layer → Create Layer → New Shapefile Layer. Choose a file name and location (<code>practical_2/damaged_buildings.shp</code>), geometry type (<code>Polygon</code>) and choose the Project CRS (27700).</p>
+</blockquote>
+<p>As with the bomb locations, there are multiple categories for the mapping buildings, including damaged buildings (pink shading) and demolished buildings (red shading).</p>
+<div class="note">
+<p>Give examples here…</p>
+</div>
+<blockquote>
+<p>Under New Field, we’ll create a new field with “Name” as <code>Category</code>. Keep “Type” as <code>Text (String)</code> and then click “Add to Fields List”.</p>
+</blockquote>
+<p>Some of the damaged buildings have dates associated with them, but most don’t, so we don’t store a date field for this layer.</p>
+</div>
+<div id="point-digitising" class="section level3" number="3.2.2">
+<h3>
+<span class="header-section-number">3.2.2</span> Point Digitising<a class="anchor" aria-label="anchor" href="#point-digitising"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>View → Toolbars → Digitizing Toolbar, which should resemble the following:</p>
+</blockquote>
+<blockquote>
+<p>With the <code>bomb_locations</code> layer selected in the Layers Panel, select Toggle Editing. When this is toggled we can create new features, editing the geometry of existing features, add or remove attributes, and even delete features.</p>
+</blockquote>
+<blockquote>
+<p>Next select “Add Point Feature” and click the map on a single bomb location. You should now be prompted to add Feature Attributes. For my example, the “Category” is <code>fire bombs</code> (red circle, blue circles for <code>high explosives</code>) and the “Date” is the 22nd December 1940.</p>
+</blockquote>
+<p>Your mapped point should now be visible in the Map View, and the Attribute Table of <code>bomb_locations</code>.</p>
+<p>To ensure this is saved, you can use <code>Save Layer Edits</code>. Alternatively, if you toggle editing, you will be prompted to either save or discard any changes you have made. Be careful!</p>
+<blockquote>
+<p>Repeat the above process to map all the individual bomb locations (as points), taking care to record the category (fire bombs, high explosives) and Date.</p>
+</blockquote>
+<div class="question">
+<p>How many bombs were dropped in our map area?</p>
+</div>
+<div class="question">
+<p>Which areas were extensively bombed? Can you think why this might be?</p>
+</div>
+</div>
+<div id="polygon-digitising" class="section level3" number="3.2.3">
+<h3>
+<span class="header-section-number">3.2.3</span> Polygon Digitising<a class="anchor" aria-label="anchor" href="#polygon-digitising"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>With the <code>damaged_buildings</code> layer selected in the Layers Panel, select Toggle Editing. When this is toggled we can create new features, editing the geometry of existing features, add or remove attributes, and even delete features.</p>
+</blockquote>
+<blockquote>
+<p>Next select “Add Polygon Feature” and click the map on the boundary of a damaged or demolished building. Continue clicking around the boundary, following the vertices of the boundary.</p>
+</blockquote>
+<blockquote>
+<p>When you are happy with your digitised shape, right click to complete the shape and add the relevant category when prompted (damaged, destroyed).</p>
+</blockquote>
+<blockquote>
+<p>Save your edits. If you wish to edit your shape, select the Vertex Tool on the Digitizing Toolbar. Select the vertex (point) you want to move, and then click again on the desired new location…</p>
+</blockquote>
+<div class="note">
+<p>snapping settings</p>
+</div>
+<blockquote>
+<p>View → Toolbars → Snapping Toolbar</p>
+</blockquote>
+<blockquote>
+<p>Repeat the above process to map all the buildings (as polygons), taking care to record the category (damaged, destroyed).</p>
+</blockquote>
+</div>
+</div>
+<div id="resources-2" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> Resources<a class="anchor" aria-label="anchor" href="#resources-2"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Devillers, R., and Jeansoulin, R. (<a href="https://doi.org/10.1002/9780470612156.ch2">2006</a>) Spatial Data Quality: Concepts, in Devillers, R., and Jeansoulin, R. (eds) <em>Fundamentals of Spatial Data Quality</em>.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="georeferencing.html"><span class="header-section-number">2</span> Georeferencing</a></div>
+<div class="next"><a href="querying.html"><span class="header-section-number">4</span> Spatial Queries</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#digitising"><span class="header-section-number">3</span> Digitising</a></li>
+<li>
+<a class="nav-link" href="#introduction-2"><span class="header-section-number">3.1</span> Introduction</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aims-2">Aims</a></li>
+<li><a class="nav-link" href="#application-2">Application</a></li>
+<li><a class="nav-link" href="#data-3">Data</a></li>
+<li><a class="nav-link" href="#tools-1">Tools</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#practical-2"><span class="header-section-number">3.2</span> Practical</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#layer-creation"><span class="header-section-number">3.2.1</span> Layer Creation</a></li>
+<li><a class="nav-link" href="#point-digitising"><span class="header-section-number">3.2.2</span> Point Digitising</a></li>
+<li><a class="nav-link" href="#polygon-digitising"><span class="header-section-number">3.2.3</span> Polygon Digitising</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#resources-2"><span class="header-section-number">3.3</span> Resources</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to GIS</strong>" was written by Matt Tomkins. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

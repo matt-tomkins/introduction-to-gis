@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 1 Introduction to QGIS | Introduction to GIS</title>
+<meta name="author" content="Matt Tomkins">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 1 Introduction to QGIS | Introduction to GIS">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 1 Introduction to QGIS | Introduction to GIS">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Source_Sans_Pro-0.4.10/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira%20Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="1.1 Introduction  Aims The aims of this practical are to: Gain experience with the QGIS interface. Become familiar with common spatial data types. Develop understanding of map production. ...">
+<meta property="og:description" content="1.1 Introduction  Aims The aims of this practical are to: Gain experience with the QGIS interface. Become familiar with common spatial data types. Develop understanding of map production. ...">
+<meta name="twitter:description" content="1.1 Introduction  Aims The aims of this practical are to: Gain experience with the QGIS interface. Become familiar with common spatial data types. Develop understanding of map production. ...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to GIS</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li class="book-part">Home</li>
+<li><a class="" href="index.html">Introduction to GIS</a></li>
+<li class="book-part">Practicals</li>
+<li><a class="active" href="intro_to_qgis.html"><span class="header-section-number">1</span> Introduction to QGIS</a></li>
+<li><a class="" href="georeferencing.html"><span class="header-section-number">2</span> Georeferencing</a></li>
+<li><a class="" href="digitising.html"><span class="header-section-number">3</span> Digitising</a></li>
+<li><a class="" href="querying.html"><span class="header-section-number">4</span> Spatial Queries</a></li>
+<li><a class="" href="visualisation.html"><span class="header-section-number">5</span> Visualisation</a></li>
+<li><a class="" href="data-sources.html"><span class="header-section-number">6</span> Data Sourcing</a></li>
+<li><a class="" href="participatory.html"><span class="header-section-number">7</span> Participatory GIS</a></li>
+<li><a class="" href="tranquil-1.html"><span class="header-section-number">8</span> Mapping Tranquility I</a></li>
+<li><a class="" href="tranquil-2.html"><span class="header-section-number">9</span> Mapping Tranquility II</a></li>
+<li class="book-part">Endmatter</li>
+<li><a class="" href="summary.html">Summary</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="intro_to_qgis" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Introduction to QGIS<a class="anchor" aria-label="anchor" href="#intro_to_qgis"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introduction" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-figure"><img src="images/banners/intro.png"></div>
+<div id="aims" class="section level3 unnumbered">
+<h3>Aims<a class="anchor" aria-label="anchor" href="#aims"><i class="fas fa-link"></i></a>
+</h3>
+<p>The aims of this practical are to:</p>
+<ol style="list-style-type: decimal">
+<li>Gain experience with the QGIS interface.</li>
+<li>Become familiar with common spatial data types.</li>
+<li>Develop understanding of map production.</li>
+</ol>
+</div>
+<div id="application" class="section level3 unnumbered">
+<h3>Application<a class="anchor" aria-label="anchor" href="#application"><i class="fas fa-link"></i></a>
+</h3>
+<p>To achieve this, we’ll load, investigate and visualise spatial data for Manchester and make our first map with QGIS.</p>
+</div>
+<div id="data" class="section level3 unnumbered">
+<h3>Data<a class="anchor" aria-label="anchor" href="#data"><i class="fas fa-link"></i></a>
+</h3>
+<p>All data for this weeks practical are available in <code>[data/manchester]</code> and include:</p>
+<ul>
+<li>Buildings and canals from the Ordnance Survey MasterMap Topography Layer [<a href="https://www.ordnancesurvey.co.uk/products/os-mastermap-topography-layer">Source</a>]</li>
+<li>Roads from the Ordnance Survey Open Roads dataset [<a href="https://www.ordnancesurvey.co.uk/products/os-open-roads">Source</a>]</li>
+<li>Trees from the Bluesky National Tree Map™ [<a href="https://bluesky-world.com/ntm/">Source</a>]</li>
+<li>Rivers from OpenStreetMap [<a href="https://www.openstreetmap.org/">Source</a>]</li>
+</ul>
+<hr>
+</div>
+</div>
+<div id="practical" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Practical<a class="anchor" aria-label="anchor" href="#practical"><i class="fas fa-link"></i></a>
+</h2>
+<div id="data-1" class="section level3" number="1.2.1">
+<h3>
+<span class="header-section-number">1.2.1</span> Data<a class="anchor" aria-label="anchor" href="#data-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>To begin the unit:</p>
+<blockquote>
+<p>Download the <code>GEOG10282</code> data pack from Canvas <a href="">here</a>. Right click → Extract All and save to a suitable location on your <strong>P Drive</strong>.</p>
+</blockquote>
+<p>The directory structure is as follows:</p>
+<ul>
+<li>
+<code>data</code>: containing the data required for the unit.</li>
+<li>
+<code>projects</code>: an empty directory for storing QGIS project files.</li>
+<li>
+<code>processing</code>: an empty directory for storing data you produce during the unit.</li>
+<li>
+<code>maps</code>: an empty directory for storing output maps.</li>
+</ul>
+<div class="note">
+<p>You should work on the P drive throughout this unit. Integration with cloud storage services (e.g., OneDrive) can cause problems, while you will have limited flexibility if working locally (C:). Don’t work on or save to C: apart from in exceptional circumstances - there is a risk your work will be lost.</p>
+<p><br></p>
+<p>Alternatively you are welcome to use QGIS on a personal machine, and instructions for installing the software are provided <a href="intro_to_qgis.html#download_qgis">here</a>.</p>
+</div>
+</div>
+<div id="qgis" class="section level3" number="1.2.2">
+<h3>
+<span class="header-section-number">1.2.2</span> QGIS<a class="anchor" aria-label="anchor" href="#qgis"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>Open QGIS.</p>
+</blockquote>
+<p>Introduce:</p>
+<ul>
+<li>Menu Bar</li>
+<li>Map View and Navigation</li>
+<li>Layers Panel</li>
+</ul>
+<blockquote>
+<p>Project → Save As → <code>P:/GEOG10282/projects/week_1.qgz</code>.</p>
+</blockquote>
+</div>
+<div id="points" class="section level3" number="1.2.3">
+<h3>
+<span class="header-section-number">1.2.3</span> Points<a class="anchor" aria-label="anchor" href="#points"><i class="fas fa-link"></i></a>
+</h3>
+<p>Manual approach:</p>
+<blockquote>
+<p>Layer → Add Layer → Add Vector Layer → Source → Vector Dataset(s) → [<code>data/manchester/trees.shp</code>]</p>
+</blockquote>
+<p>Drag-and-drop:</p>
+<blockquote>
+<p>Navigate to the <code>[data/manchester]</code> directory, select <code>trees.shp</code> (<strong>not</strong> <code>.cpg</code>, <code>.dbf</code>, <code>.prj</code>, or <code>.shx</code>), drag to the QGIS window, and release on the Map Window.</p>
+</blockquote>
+<p>Remove one of the layers from the Layers Panel:</p>
+<blockquote>
+<p>Layers Panel → Right Click the layer → Remove Layer.</p>
+</blockquote>
+<p>To provide context:</p>
+<blockquote>
+<p>Web → QuickMapServices → Google → Google Hybrid</p>
+</blockquote>
+<p>Introduce layer hierarchy and visibility:</p>
+<blockquote>
+<p>Layers Panel → Drag <code>trees</code> to the bottom, below <code>Google Hybrid</code>.</p>
+</blockquote>
+<blockquote>
+<p>Layers Panel → Uncheck the tick box for <code>trees</code>.</p>
+</blockquote>
+<p>High-level introduction to <strong>point</strong> vector data.</p>
+<blockquote>
+<p>Right click <code>trees</code> in the Layers Panel → Properties → Information</p>
+</blockquote>
+<div class="question">
+<p>How many trees are there in this area of Manchester?</p>
+</div>
+<blockquote>
+<p>Right click <code>trees</code> in the Layers Panel → Open Attribute Table</p>
+</blockquote>
+<p>Introduce geometries and attributes (<code>height</code> is the maximum height of the tree in meters).</p>
+<div class="question">
+<p>What is the height of the tallest tree in this area?</p>
+</div>
+<blockquote>
+<p>Click the <code>height</code> column to sort in descending order.</p>
+</blockquote>
+<div class="question">
+<p>Where is the tallest tree?</p>
+</div>
+<blockquote>
+<p>Highlight the row in the Attribute Table with the maximum height → Zoom map to the selected rows.</p>
+</blockquote>
+<div class="question">
+<p>How far away is the nearest tree to the main entrance of the Rutherford Building?</p>
+</div>
+<blockquote>
+<p>Pan the map to the Rutherford Building → Attributes Toolbar → Measure Line → Click on the entrance in the satellite basemap → Click on the nearest tree point <span class="math inline">\(\approx16\;\text{m distance}\)</span>.</p>
+</blockquote>
+<div class="question">
+<p>How tall is it?</p>
+</div>
+<blockquote>
+<p>Attributes Toolbar → Identify Features → Click on the nearest tree point <span class="math inline">\(\approx22.7\;\text{m height}\)</span>.</p>
+</blockquote>
+<p>To modify our layer symbology:</p>
+<blockquote>
+<p>Right click → Properties → Symbology → Graduated → Value = <code>height</code> → Classify → Apply</p>
+</blockquote>
+<blockquote>
+<p>Color ramp → Greens</p>
+</blockquote>
+<blockquote>
+<p>Mode → Natural Breaks (Jenks) → Classes = <code>10</code> → Apply</p>
+</blockquote>
+</div>
+<div id="lines" class="section level3" number="1.2.4">
+<h3>
+<span class="header-section-number">1.2.4</span> Lines<a class="anchor" aria-label="anchor" href="#lines"><i class="fas fa-link"></i></a>
+</h3>
+<p>Using a manual or drag-and-drop approach:</p>
+<blockquote>
+<p>Add [<code>data/manchester/roads.shp</code>] to QGIS.</p>
+</blockquote>
+<p>High-level introduction to <strong>line</strong> vector data.</p>
+<blockquote>
+<p>Properties → Symbology → Categorized → Value = <code>class</code> → Apply.</p>
+</blockquote>
+<p>Move from random to a more meaningful symbology:</p>
+<blockquote>
+<p>Symbology → Double click <code>A Road</code> symbol → Color = Green (<code>#159666</code>) → Width = 0.5</p>
+</blockquote>
+<blockquote>
+<p>Symbology → Double click <code>Motorway</code> symbol → Color = Blue (<code>#1a9bfa</code>) → Width = 0.8</p>
+</blockquote>
+<blockquote>
+<p>Symbology → Select all other categories <strong>except</strong> <em>all other values</em> → Delete</p>
+</blockquote>
+<blockquote>
+<p>Symbology → Double click <code>all other values</code> symbol → Color = Grey (<code>#c5c5c5</code>) → Width = 0.2</p>
+</blockquote>
+</div>
+<div id="polygons" class="section level3" number="1.2.5">
+<h3>
+<span class="header-section-number">1.2.5</span> Polygons<a class="anchor" aria-label="anchor" href="#polygons"><i class="fas fa-link"></i></a>
+</h3>
+<p>Using a manual or drag-and-drop approach:</p>
+<blockquote>
+<p>Add the following datasets to QGIS: [<code>buildings.shp</code>, <code>river.shp</code>, <code>canals.shp</code>]</p>
+</blockquote>
+<p>High-level introduction to <strong>polygon</strong> vector data.</p>
+<p>Unlike line data, with polygons (and points) we can edit both the fill color and the stroke (edge) color.</p>
+<blockquote>
+<p>Properties of the <code>buildings</code> layer → Symbology → Simple Fill → Fill Color = Grey (<code>#d2d2d2</code>) → Stroke Color = Black (#000000) or click the Down arrow → Transparent Stroke</p>
+</blockquote>
+<blockquote>
+<p>Using the skills you’ve developed so far, modifying the symbology of the <code>river</code> and <code>canals</code> layers.</p>
+</blockquote>
+</div>
+<div id="map-production" class="section level3" number="1.2.6">
+<h3>
+<span class="header-section-number">1.2.6</span> Map production<a class="anchor" aria-label="anchor" href="#map-production"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>Project → New Print Layout → Enter a name e.g., <code>Week_1_map</code>.</p>
+</blockquote>
+<p>QGIS is arguably the best software for map production, and there is lots of functionality in here that we won’t be able to cover in detail.</p>
+<p>We’ll focus on some of the key elements of most maps - adding a legend, north arrow, and scale bar.</p>
+<blockquote>
+<p>Add Item → Add Map</p>
+</blockquote>
+<blockquote>
+<p>Select/Move Item to resize the map frame</p>
+</blockquote>
+<blockquote>
+<p>Move Item Content to set the size and position of content within the map frame. Use the mouse wheel to rescale the map or set this manually in Item Properties → Main Properties → Scale, and pan the map to your desired location e.g., the University campus.</p>
+</blockquote>
+<p>Back in the main QGIS window:</p>
+<blockquote>
+<p>Decide which layers you want to include or exclude from your output map, by checking or unchecking these in the Layers Panel.</p>
+</blockquote>
+<blockquote>
+<p>Think carefully about layer hierarchy.</p>
+</blockquote>
+<blockquote>
+<p>Typically we would not use the QuickMapServices base imagery.</p>
+</blockquote>
+<blockquote>
+<p>Add Item → Add Scale Bar</p>
+</blockquote>
+<blockquote>
+<p>Add Item → Add Legend</p>
+</blockquote>
+<blockquote>
+<p>Add Item → Add North Arrow</p>
+</blockquote>
+<blockquote>
+<p>Add Item → Add Label (title)</p>
+</blockquote>
+</div>
+<div id="map-export" class="section level3" number="1.2.7">
+<h3>
+<span class="header-section-number">1.2.7</span> Map export<a class="anchor" aria-label="anchor" href="#map-export"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>Layout → Export as Image → [<code>GEOG10282/maps/week_1_map.png</code>] → Save. Export resolution = <code>300 dpi</code>. Crop to Content = Checked → Save.</p>
+</blockquote>
+<p><strong>Congratulations!</strong> You have completed the practical and should now be familiar with QGIS, important types of spatial data, and have produced your first map.</p>
+<p><a href="index.html#index">Finished!</a></p>
+</div>
+</div>
+<div id="download_qgis" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Extra<a class="anchor" aria-label="anchor" href="#download_qgis"><i class="fas fa-link"></i></a>
+</h2>
+<p>For those of you who would prefer to work on a personal machine:</p>
+<blockquote>
+<p>Instructions for installing QGIS.</p>
+</blockquote>
+</div>
+<div id="resources" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Resources<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Devillers, R., and Jeansoulin, R. (<a href="https://doi.org/10.1002/9780470612156.ch2">2006</a>) Spatial Data Quality: Concepts, in Devillers, R., and Jeansoulin, R. (eds) <em>Fundamentals of Spatial Data Quality</em>.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">Introduction to GIS</a></div>
+<div class="next"><a href="georeferencing.html"><span class="header-section-number">2</span> Georeferencing</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#intro_to_qgis"><span class="header-section-number">1</span> Introduction to QGIS</a></li>
+<li>
+<a class="nav-link" href="#introduction"><span class="header-section-number">1.1</span> Introduction</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aims">Aims</a></li>
+<li><a class="nav-link" href="#application">Application</a></li>
+<li><a class="nav-link" href="#data">Data</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#practical"><span class="header-section-number">1.2</span> Practical</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data-1"><span class="header-section-number">1.2.1</span> Data</a></li>
+<li><a class="nav-link" href="#qgis"><span class="header-section-number">1.2.2</span> QGIS</a></li>
+<li><a class="nav-link" href="#points"><span class="header-section-number">1.2.3</span> Points</a></li>
+<li><a class="nav-link" href="#lines"><span class="header-section-number">1.2.4</span> Lines</a></li>
+<li><a class="nav-link" href="#polygons"><span class="header-section-number">1.2.5</span> Polygons</a></li>
+<li><a class="nav-link" href="#map-production"><span class="header-section-number">1.2.6</span> Map production</a></li>
+<li><a class="nav-link" href="#map-export"><span class="header-section-number">1.2.7</span> Map export</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#download_qgis"><span class="header-section-number">1.3</span> Extra</a></li>
+<li><a class="nav-link" href="#resources"><span class="header-section-number">1.4</span> Resources</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to GIS</strong>" was written by Matt Tomkins. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
