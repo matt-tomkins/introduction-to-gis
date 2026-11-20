@@ -42,6 +42,8 @@ Select with distance (river, railways...)
 ... number of buildings
 ... total building area?
 
+Minor edit to test Git permissions
+
 ## Resources
 
 - Devillers, R., and Jeansoulin, R. ([2006](https://doi.org/10.1002/9780470612156.ch2)) Spatial Data Quality: Concepts, in Devillers, R., and Jeansoulin, R. (eds) *Fundamentals of Spatial Data Quality*. 
